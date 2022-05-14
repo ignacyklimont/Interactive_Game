@@ -1,4 +1,4 @@
-#Interactive Tic-Tac-Toe game
+Interactive Tic-Tac-Toe game
 
 Interactive Tic-Tac-Toe game designed in Python.
 
