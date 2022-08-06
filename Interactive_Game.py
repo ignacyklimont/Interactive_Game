@@ -16,8 +16,11 @@ def game_state(cells):
 	else:
 		if cells_full:
 			return 'Draw'
+
+
 cells = '         '
 cells_matrix = [[cells[0], cells[1], cells[2]], [cells[3], cells[4], cells[5]], [cells[6], cells[7], cells[8]]]
+
 
 def print_board():
 	print("-" * 9)
@@ -26,6 +29,7 @@ def print_board():
 	print('|', cells_matrix[2][0], cells_matrix[2][1], cells_matrix[2][2], '|')
 	print("-" * 9)
 
+
 print_board()
 counter = 0
 while counter <= 9:
@@ -33,15 +37,13 @@ while counter <= 9:
 		print('Draw')
 		break
 	try:
-		x,y = input("Enter the coordinates: ").split()
+		x, y = input("Enter the coordinates: ").split()
 		if not x.isdigit() or not y.isdigit():
 			print("You should enter numbers!")
 		elif x.isdigit() and y.isdigit():
 			x = int(x) - 1
 			y = int(y) - 1
-			if not ((x >= 0 and x <= 2) and (y >= 0 and y <= 2)):
-				print("Coordinates should be from 1 to 3!")
-			else:
+			if (0 <= x <= 2) and (0 <= y <= 2):
 				if cells_matrix[x][y] == ' ':
 					if counter % 2 == 0:
 						cells_matrix[x][y] = 'X'
@@ -51,10 +53,12 @@ while counter <= 9:
 					counter += 1
 				else:
 					print('This cell is occupied! Choose another one!')
+			else:
+				print("Coordinates should be from 1 to 3!")
 	except:
 		print('You should enter two numbers!')
 	cells = ''.join([''.join([str(ele) for ele in sub]) for sub in cells_matrix])
-	if game_state(cells) == None:
+	if game_state(cells) is None:
 		continue
 	else:
 		print(game_state(cells))
