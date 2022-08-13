@@ -1,5 +1,8 @@
-# FIELD COORDINATES
+# Project: Tic-Tac-Toe Game
+# Python 3.10
+# Date: 15/05/2022
 
+# FIELD COORDINATES
 # (1, 3) (2, 3) (3, 3)
 # (1, 2) (2, 2) (3, 2)
 # (1, 1) (2, 1) (3, 1)
@@ -55,7 +58,7 @@ while counter <= 9:
 					print('This cell is occupied! Choose another one!')
 			else:
 				print("Coordinates should be from 1 to 3!")
-	except:
+	except ValueError:
 		print('You should enter two numbers!')
 	cells = ''.join([''.join([str(ele) for ele in sub]) for sub in cells_matrix])
 	if game_state(cells) is None:

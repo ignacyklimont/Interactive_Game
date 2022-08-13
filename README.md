@@ -1,11 +1,6 @@
-Interactive Tic-Tac-Toe
+### Python 3.10
 
-Interactive Tic-Tac-Toe game designed in Python.
+# Tic-Tac-Toe Game
 
-Based on commands inserted by user.
-
-The cells are constantly updated according to the moves.
-
-The outcome of the game is either the win of X, O or draw.
-
-Enjoy!
+Interactive Tic-Tac-Toe game designed in Python. Operated by commands inserted by user.
+The cells are constantly updated according to the moves. The outcome of the game is either the win of X, O or draw.
